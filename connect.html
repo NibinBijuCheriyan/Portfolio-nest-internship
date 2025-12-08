@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        <!-- navbar -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="navigateTo('home')">Nibin Biju Cheriyan</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="ventures.html">Ventures</a></li>
+                    <li><a href="recoginition.html">Recognition</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <section style="padding-top: var(--space-2xl);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Let's Connect</h2>
+                    <p class="section-intro">Ready to collaborate on your next innovative project?</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:nibin00077@gmail.com">nibin00077@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 8606174510</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <p><a href="https://www.linkedin.com/in/nibin-biju-cheriyan-59a71b333/" target="_blank">LinkedIn Profile</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <p><a href="https://github.com/NibinBijuCheriyan/NibinBijuCheriyan" target="_blank">GitHub Repositories</a></p>
+                    </div>
+                </div>
+                
+                <form class="contact-form" onsubmit="alert('Thank you for your message! I will be in touch soon.'); return false;">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message or Project Proposal"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    
+     <footer>
+        <div class="container">
+            <p>&copy; 2025 Nibin Biju Cheriyan. All rights reserved.</p>
+        </div>
+    </footer>
+
+        <script>
+        function navigateTo(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

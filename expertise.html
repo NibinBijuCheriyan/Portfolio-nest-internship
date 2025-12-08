@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertise</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        <!-- navbar -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="navigateTo('home')">Nibin Biju Cheriyan</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="ventures.html">Ventures</a></li>
+                    <li><a href="recoginition.html">Recognition</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ <div id="skills" class="page">
+        <section style="padding-top: var(--space-2xl);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Expertise</h2>
+                    <p class="section-intro">A comprehensive overview of my technical skills and proficiencies</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="card skill-card">
+                        <h3>Backend & Core Languages</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-code"></i> Go (Golang): High-Performance Systems, Concurrency</li>
+                            <li><i class="fas fa-code"></i> Python: Data Science, Backend Services, Automation</li>
+                            <li><i class="fas fa-code"></i> C++: Foundational Programming, Performance Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-card">
+                        <h3>Front-End & Development</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-desktop"></i> Frameworks: React.js, Angular, Node.js, Express</li>
+                            <li><i class="fas fa-desktop"></i> Web Standards: HTML5, CSS3, JavaScript (ES6+)</li>
+                            <li><i class="fas fa-globe-americas"></i> Tools: Git/GitHub, Responsive Web Design</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-card">
+                        <h3>Deep Tech & Strategy</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-cloud"></i> Cloud: AWS/GCP Concepts, Scalable Architecture</li>
+                            <li><i class="fas fa-link"></i> Emerging Tech: Blockchain, Decentralized Systems</li>
+                            <li><i class="fas fa-brain"></i> AI/Data: Data Science Fundamentals, AI Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    
+     <footer>
+        <div class="container">
+            <p>&copy; 2025 Nibin Biju Cheriyan. All rights reserved.</p>
+        </div>
+    </footer>
+
+        <script>
+        function navigateTo(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    
+</body>
+</html>

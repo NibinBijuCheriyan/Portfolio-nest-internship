@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="navigateTo('home')">Nibin Biju Cheriyan</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="ventures.html">Ventures</a></li>
+                    <li><a href="recoginition.html">Recognition</a></li>
+                    <li><a href="connect.html">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+     <div id="about" class="page">
+        <section style="padding-top: var(--space-2xl);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                </div>
+                <div class="grid grid-2" style="align-items: start;">
+                    <div>
+                        <img src="photos/nibin photo.jpg" alt="Nibin Biju Cheriyan" style="width: 100%; max-width: 400px; border-radius: var(--radius-lg); border: 4px solid var(--primary-color);">
+                    </div>
+                    <div>
+                        <h3>Professional Journey</h3>
+                        <p style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+                            I am Nibin Biju Cheriyan, a Go Lang Developer and Entrepreneur dedicated to building the future at the intersection of deep technology and practical application. My core expertise lies in developing scalable, high-performance systems using Go (Golang) and Python, complemented by strong foundational knowledge in C++ and modern frontend development (React.js, Angular).
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+                            I specialize in strategic areas like Cloud Computing, Blockchain Technologies, and the transformative power of AI/Data Science. I thrive on leveraging these tools to create innovative solutions that challenge the status quo.
+                        </p>
+                        
+                        <h3 style="margin-top: var(--space-xl);">Vision & Mission</h3>
+                        <p style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+                            This entrepreneurial vision is exemplified by my work on <strong style="color: var(--primary-color);">Mindscape</strong>, a revolutionary project for rural futurism. Mindscape aims to merge decentralized AI, biocomputing, and cosmic ethics to evolve villages into sentient, data-driven ecosystems—proving that complexity can serve evolution.
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+                            I am always seeking opportunities to lead innovative development, mentor talent, and build robust, impactful technology. Let's connect to discuss disruptive projects and the next generation of computing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+     <footer>
+        <div class="container">
+            <p>&copy; 2025 Nibin Biju Cheriyan. All rights reserved.</p>
+        </div>
+    </footer>
+
+        <script>
+        function navigateTo(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+   
+   
+   
